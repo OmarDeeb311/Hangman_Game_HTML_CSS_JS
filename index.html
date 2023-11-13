@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="pop-up">
+        <button class="play_again">Play Again</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="game-info">
+        <div class="game-name">Hangman</div>
+        <div class="category">Word From : <span></span></div>
+        <div class="change-div">
+          <button class="change">Another Word</button>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="hangman-draw">
+          <div class="the-draw">
+            <div class="the-stand"></div>
+            <div class="the-hang-1"></div>
+            <div class="the-hang-2"></div>
+            <div class="the-rope"></div>
+            <div class="the-man">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="left-hand"></div>
+              <div class="right-hand"></div>
+              <div class="left-leg"></div>
+              <div class="right-leg"></div>
+            </div>
+          </div>
+        </div>
+        <div class="letters"></div>
+      </div>
+      <hr />
+      <div class="letters-guess"></div>
+    </div>
+
+    <audio src="correct.mp3" class="correct" preload="auto"></audio>
+    <audio src="wrong.mp3" class="wrong" preload="auto"></audio>
+    <audio src="win.mp3" class="win" preload="auto"></audio>
+    <audio src="lose.mp3" class="lose" preload="auto"></audio>
+    <script src="main.js">
+
+      window.onload = () => {
+                  let music = document.querySelector(".music");
+                  music.play();
+              };
+    </script>
+  </body>
+</html>
